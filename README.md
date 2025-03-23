@@ -1,96 +1,43 @@
-# 🛡 SecureIPC-Framework
+# 🚀 Secure IPC Framework - Pub/Sub System
 
-A **high-performance, secure Inter-Process Communication (IPC) framework** for Windows OS, built on a **Publish-Subscribe (Pub-Sub) architecture**. This project focuses on **asynchronous messaging, message security, and efficient process communication**, ensuring **scalability and tamper-proof data exchange**.
+## 📌 Overview
+This project implements a **Publish-Subscribe (Pub/Sub) system** as an **Inter-Process Communication (IPC) framework**, focusing on **security and performance**. It enables efficient message distribution between multiple components while ensuring **tamper-proof communication**. 🔐
 
----
+## 🛠️ Technologies Used
+- **📂 GIT**: Used as a version control system for tracking changes and collaborating.
+- **💻 IDE**: Microsoft VS Code for code development and debugging.
+- **🐧 OS**: Ubuntu *(Mac users can use LIMA emulators or a VM).*  
+  - *🔹 Reason:* Mac’s native file system and process handling differ from Linux-based environments. **Mac does not natively support some low-level IPC mechanisms like System V shared memory and message queues**. LIMA provides a lightweight way to run Linux tools natively without needing a full VM, making it ideal for Mac users working on Unix-based projects.
+- **🐞 Debugging Tools**: GNU Debugger (GDB) for testing and debugging C-based implementations.
 
-## 🚀 Why Secure IPC?
-Traditional IPC mechanisms lack **robust security** and **scalability**, making them vulnerable to **data interception and tampering**. SecureIPC-Framework solves this by integrating **encryption, access control, and health monitoring**, making it ideal for **enterprise applications, microservices, and real-time systems**.
+## 🌍 Real-Life Use Cases of Pub/Sub Systems
+The **Pub/Sub model** is a fundamental IPC concept widely used in various real-world applications:
 
----
+1. **💬 Messaging Systems** (e.g., Kafka, RabbitMQ, MQTT) → Used for chat apps, notification services, and distributed logging.
+2. **🔗 Microservices Communication** → Helps microservices interact asynchronously without being tightly coupled.
+3. **📈 Stock Market Feeds** → Real-time stock trading platforms update traders instantly with price fluctuations.
+4. **🏡 IoT Networks** → Smart home devices communicate securely using Pub/Sub to exchange sensor data and commands.
+5. **🎮 Gaming & 📡 Real-Time Streaming** → Multiplayer games and live-streaming platforms rely on Pub/Sub for synchronized event handling.
 
-## 🔹 Features
+## 🔒 Importance of Security in Pub/Sub Systems
+Since Pub/Sub systems deal with **real-time message distribution**, security is a major concern. Here’s why:
 
-✔ **Pub-Sub Architecture** – Decouples publishers and subscribers for flexible, event-driven messaging.
-✔ **Message Broker** – Centralized topic registry and efficient message routing.
-✔ **Multi-Threaded Processing** – Optimized with thread pools for parallel execution.
-✔ **Message Prioritization** – Ensures high-priority messages are delivered first.
-✔ **Heartbeat Monitoring** – Detects inactive publishers/subscribers for system health tracking.
-✔ **End-to-End Encryption** – AES-256 encryption to protect data in transit and at rest.
-✔ **Authentication & Access Control** – Implements Windows ACLs and identity verification.
-✔ **Dynamic Scaling** – Auto-adjusts system resources based on workload.
+- **🚫 Preventing Unauthorized Access** → Without authentication, **malicious subscribers** can eavesdrop on sensitive messages.
+- **✅ Data Integrity & Tamper Protection** → Attackers can **modify or inject fake messages**, leading to incorrect data processing.
+- **💥 Denial of Service (DoS) Attacks** → Unsecured brokers can be flooded with junk messages, causing service disruptions.
+- **🔑 Encryption for Data Privacy** → Messages must be **encrypted in transit** to prevent interception by third parties.
+- **👤 Authentication & Authorization** → Only verified publishers and subscribers should be allowed to communicate.
 
----
-
-## 🛠 Tech Stack
-
-🔹 **Languages:** C/C++  
-🔹 **Technologies:** Windows API, Named Pipes, Message Queues, Multi-threading  
-🔹 **Security:** AES-256, HMAC-SHA256, Windows ACLs  
-
----
-
-## 📌 Project Goal
-To develop a **scalable, secure, and high-performance IPC solution** for Windows OS, integrating **message encryption, authentication, and process health monitoring** for enterprise-grade security.
-
----
-
-## 📂 Project Structure
-```
-SecureIPC-Framework/
-│── src/                  # Source code
-│   ├── broker/           # Message broker logic
-│   ├── publisher/        # Publisher module
-│   ├── subscriber/       # Subscriber module
-│   ├── security/         # Encryption & authentication
-│   ├── utils/            # Helper utilities
-│── docs/                 # Documentation & design specs
-│── tests/                # Unit & integration tests
-│── README.md             # Project overview
-```
-
----
-
-## 🔧 Installation & Setup
-```sh
-# Clone the repository
-git clone https://github.com/your-repo/SecureIPC-Framework.git
-
-# Navigate to the project directory
-cd SecureIPC-Framework
-
-# Build the project (using CMake or Makefile)
-make build
-
-# Run the broker
-./broker
-
-# Start a publisher
-./publisher "topic_name" "message_data"
-
-# Start a subscriber
-./subscriber "topic_name"
-```
-
----
+## 📚 Knowledge Base
+- **What is an IPC?** → [GeeksforGeeks - IPC Overview](https://www.geeksforgeeks.org/inter-process-communication-ipc/)
+- **What is a Pub/Sub Architecture?** → [GeeksforGeeks - Pub/Sub](https://www.geeksforgeeks.org/what-is-pub-sub/)
 
 ## 📌 Roadmap
-- [x] Implement Pub-Sub Messaging Core  
-- [x] Add Multi-Threading Support  
-- [x] Implement Message Encryption & Authentication  
-- [ ] Integrate Dynamic Scaling  
-- [ ] Develop Comprehensive Test Suite  
+- [x] Implement Pub-Sub Messaging Core
+- [x] Add Multi-Threading Support
+- [x] Implement Message Encryption & Authentication
+- [ ] Integrate Dynamic Scaling
+- [ ] Develop Comprehensive Test Suite
 
----
-
-## 🤝 Contributing
-Pull requests are welcome! Feel free to **fork** the repo, make changes, and submit a **PR**. For major changes, please open an **issue** first to discuss the modifications.
-
----
-
-## 📜 License
-This project is **open-source** under the **MIT License**.
-
----
-
-### 🔥 Ready to Build Secure IPC? Let's Go! 🚀
+## 🎯 Conclusion
+The **Secure IPC Pub/Sub Framework** ensures **efficient, real-time, and secure communication** between processes while preventing common security threats. 🔥 As IPC plays a crucial role in modern applications, making it **robust and attack-resistant** is vital for maintaining **system reliability and confidentiality**. 🛡️
