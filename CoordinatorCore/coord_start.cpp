@@ -121,27 +121,6 @@ coord_init_pub_sub_table() {
     PQclear(res);
 }
 
-/* This function does the following : 
-    1. Create a new DB user called  "Coordinator"
-    2. Create a new DB called COORD_DB_NAME
-    3. Assign new user created in step 1 all priveleges on this new DB created in step 2
-
-    We need to re-config postgresDB before running this fn as follows :
-     
-    1. Open file /etc/postgresql/<version>/main/pg_hba.conf   (in my case, version was 16)
-    2.  Change 'peer' to 'md5' in below line
-            local   all             postgres                                peer
-        
-    3. Add below line immediately after the line you modified above 
-            local   all             coordinator                             md5
-    4. Add below extra line 
-    # IPv4 local connections:
-    host    all             all             127.0.0.1/32            scram-sha-256
-    host    all             coordinator     127.0.0.1/32            md5                <<<< new line added
-    
-    5. restart DB :  sudo systemctl restart postgresql
-*/
-
 static void 
 coordinator_init_sql_db() {
 
