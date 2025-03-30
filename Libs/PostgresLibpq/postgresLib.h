@@ -2,7 +2,7 @@
 #define __POSTGRESLIB__
 
 #include <stdint.h>
-#include <postgresql/libpq-fe.h>
+#include <postgresql/lib>
 
 #define DEFAULT_POSTGRES_SERVER_PORT 5432
 
