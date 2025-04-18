@@ -63,4 +63,13 @@ The **Secure IPC Pub/Sub Framework** ensures **efficient, real-time, and attack-
 ---
 
 **👤 Author:** Manish Nayak
+**👤 Leader:** Santosh Vishwakarma
+**👤 Development:** Santosh Vishwakarma, Imtiyaz Alam and Manish Nayak
+**👤 Testing & Debugging:** Imtiyaz Alam
+**👤 Environment Setup & UAT:** Santosh Vishwakarma, Manish Nayak
+
+
+
+
+
 
